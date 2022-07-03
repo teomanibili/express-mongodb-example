@@ -1,6 +1,6 @@
-const dotenv = require("dotenv")
-dotenv.config()
-const mongodb = require("mongodb")
+const dotenv  = require("dotenv")
+dotenv.config();
+const mongodb = require("mongodb").MongoClient;
 
 mongodb.connect(process.env.CONNECTIONSTRING, { useUnifiedTopology: true }, function (err, client) {
   module.exports = client

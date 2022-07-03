@@ -5,7 +5,7 @@ const db = client.db()
 
 app.get("/", async (req, res) => {
   try {
-    const dogs = await db.collection("pets").find({ species: "dog" }).toArray()
+    const dogs = await db.collection("pets").find({ species: "Kedi" }).toArray()
     if (dogs.length) {
       res.json(dogs)
     } else {
